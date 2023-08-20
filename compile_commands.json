@@ -1,0 +1,44 @@
+[
+ {
+  "directory": "/home/luma-chn/Devel/cpp/form",
+  "arguments": [
+   "clang++",
+   "-Wall",
+   "-Wextra",
+   "-c",
+   "-Iinclude",
+   "src/functions.cpp",
+   "-o",
+   "build/functions.o"
+  ],
+  "file": "src/functions.cpp"
+ },
+ {
+  "directory": "/home/luma-chn/Devel/cpp/form",
+  "arguments": [
+   "clang++",
+   "-Wall",
+   "-Wextra",
+   "-c",
+   "-Iinclude",
+   "src/main.cpp",
+   "-o",
+   "build/main.o"
+  ],
+  "file": "src/main.cpp"
+ },
+ {
+  "directory": "/home/luma-chn/Devel/cpp/form",
+  "arguments": [
+   "clang++",
+   "-Wall",
+   "-Wextra",
+   "-c",
+   "-Iinclude",
+   "src/scene.cpp",
+   "-o",
+   "build/scene.o"
+  ],
+  "file": "src/scene.cpp"
+ }
+]
