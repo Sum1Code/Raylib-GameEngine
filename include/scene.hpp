@@ -4,8 +4,8 @@
 #include <vector>
 
 struct Object {
-  Object() {}
-  virtual ~Object() {}
+  Object(){};
+  virtual ~Object(){};
 };
 
 struct CUBE : public Object {

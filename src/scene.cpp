@@ -1,4 +1,5 @@
 #include "scene.hpp"
+#include <raylib.h>
 #include <vector>
 
 Scene::Scene(Object object) {
@@ -12,5 +13,6 @@ Scene::Scene(Object object) {
 }
 
 void Scene::render() {
-  // Implement your rendering code here
+  BeginMode3D(cam);
+  EndMode3D();
 }
