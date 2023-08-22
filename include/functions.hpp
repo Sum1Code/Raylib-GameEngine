@@ -1,4 +1,4 @@
 #pragma once
-#include <raylib.h>
+#include "scene.hpp"
 
-void AppMain();
+void handle_inputs(int &fps, libengine::Scene &currscene);
