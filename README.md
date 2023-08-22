@@ -7,3 +7,7 @@ A Unity-Like Game engine made with Raylib.. cheating? Maybe...
 - `git clone https://github.com/Sum1Code/Raylib-GameEngine`
 - `cd Raylib-GameEngine`
 - `make`
+
+### TODO:
+- Add cleanup code for Scenes to automaticlly delete objects within a scene
+- primitive objects

@@ -1,5 +1,5 @@
 CC=clang++
-CFLAGS=-Wall -Wextra 
+CFLAGS=-Wall -Wextra  
 BIN=app
 
 OBJDIR=build
@@ -16,7 +16,10 @@ $(BIN): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -I$(INCLDIR) -o $@ $(LIBS)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
+	mkdir -p $(OBJDIR)
 	$(CC) $(CFLAGS) -c -I$(INCLDIR) $< -o $@
+
+
 
 clean:
 	rm $(OBJDIR)/* $(BIN)

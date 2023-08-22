@@ -5,14 +5,15 @@
 #include <scene.hpp>
 
 int main(void) {
-  CUBE c1 = CUBE((Vector3){0, 0, 0}, (Vector3){2, 2, 2}, BLUE);
-  Scene main = Scene(c1);
-
+  CubeObject *c1 = new CubeObject((Vector3){0.0f, 0.0f, 0.0f},
+                                  (Vector3){2.0f, 2.0f, 2.0f}, BLUE);
+  Scene main = Scene();
+  main.add_object(c1);
+  // main.add_object(c2);
   InitWindow(800, 600, "Game");
   while (!WindowShouldClose()) {
-    BeginDrawing();
-    ClearBackground(RAYWHITE);
+    SetTargetFPS(60);
     main.render();
-    EndDrawing();
   }
+  // TODO: ADD CLEANUP CODE
 }
