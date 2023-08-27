@@ -1,4 +1,4 @@
 #pragma once
-#include "scene.h"
+#include "core.h"
 #include <raymath.h>
-void handle_inputs(int &fps, libengine::Scene &currscene);
+void handle_inputs(int &fps, libengine::core::Scene &currscene);
