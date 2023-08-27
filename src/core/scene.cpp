@@ -1,11 +1,9 @@
 // scene.cpp
-#include "scene.hpp"
-#include <raylib.h>
-#include <vector>
+#include "scene.h"
 
 libengine::Scene::Scene() {
-  cam = (Camera3D){.position = {0.0f, 10.0f, 10.0f},
-                   .target = {0.0f, 1.0f, 0.0f},
+  cam = (Camera3D){.position = {10.0f, 10.0f, 10.0f},
+                   .target = {0.0f, 0.0f, 0.0f},
                    .up = {0.0f, 1.0f, 0.0f},
                    .fovy = 45.0f,
                    .projection = CAMERA_PERSPECTIVE};
@@ -16,7 +14,7 @@ void libengine::Scene::render() {
   BeginDrawing();
   ClearBackground(RAYWHITE);
   BeginMode3D(cam);
-  DrawGrid(256, 1.0f);
+  DrawGrid(100, 1.0f);
   for (const auto &object : objects) {
     object->draw();
   }
