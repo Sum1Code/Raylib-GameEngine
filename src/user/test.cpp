@@ -1,24 +1,20 @@
 #include "core.h"
+#include "coreobjects.h"
 #include "functions.h"
 #include <iostream>
+#include <raylib.h>
 
 using namespace libengine::core::objects;
-using namespace libengine::core;
+using namespace libengine::core::scene;
 int main(void) {
-  auto cube1 =
-      new CubeObject((Vector3){0, 0, 0}, (Vector3){2, 2, 2}, BLUE, GREEN);
-  auto cube2 =
-      new CubeObject((Vector3){4, 0, 4}, (Vector3){2, 2, 2}, BLUE, GREEN);
-
-  auto scene = Scene();
   int fps = 60;
-  scene.add_object(cube1);
-  scene.add_object(cube2);
+  auto mainscene = Scene();
+  mainscene.add_object(ObjectType::CUBE);
   InitWindow(1920, 1080, "Game");
+  SetTargetFPS(fps);
   while (!WindowShouldClose()) {
-    SetTargetFPS(fps);
-    std::cout << fps << "\n";
-    handle_inputs(fps, scene);
-    scene.render();
+    handle_inputs(fps, mainscene);
+    mainscene.render();
   }
+  return 0;
 }

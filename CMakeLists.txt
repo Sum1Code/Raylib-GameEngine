@@ -1,6 +1,7 @@
 cmake_minimum_required( VERSION 3.20 )
 project(rayengine)
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
+set(CMAKE_CXX_STANDARD 20)
 # include(FetchContent)
 # set(FETCHCONTENT_QUIET FALSE)
 # set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) # don't build the supplied examples
@@ -19,6 +20,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 file(GLOB SRCS "src/**/*.cpp")
 
-add_executable(rayengine ${SRCS})
-target_link_libraries(rayengine PRIVATE raylib)
+add_executable(${PROJECT_NAME} ${SRCS})
+target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
 

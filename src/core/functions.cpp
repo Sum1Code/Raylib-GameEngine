@@ -1,8 +1,7 @@
 
 #include "functions.h"
 #include "core.h"
-#include <raylib.h>
-void handle_inputs(int &fps, libengine::core::Scene &currscene) {
+void handle_inputs(int &fps, libengine::core::scene::Scene &currscene) {
 
   const float minFOV = 1.0f;
   const float maxFOV = 45.0f;
