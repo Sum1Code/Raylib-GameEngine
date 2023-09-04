@@ -1,6 +1,5 @@
-# Raylib-GameEngine !!STILL IN DEVELOPMENT!!
-
-A Unity-Like Game engine made with Raylib.. cheating? definitely... 
+# Rayengine << STILL IN DEVELOPMENT >>
+A UI Game engine made with Raylib.. cheating? definitely... 
 
 ## DEPENDENCIES
 - raylib 4.5.0
@@ -9,17 +8,14 @@ A Unity-Like Game engine made with Raylib.. cheating? definitely...
 - `git clone https://github.com/Sum1Code/Raylib-GameEngine`
 - `cd Raylib-GameEngine`
 - `make`
-
-
-### CURRENT TODO:
-- [ ] cleanup code for scenes
-- [ ] select object by clicking
-- [ ] object properties menu
-- [ ] drag objects
-- [ ] in-app object add
-- [ ] Save Scenes
+### OR
+- `git clone https://github.com/Sum1Code/Raylib-GameEngine`
+- `cd Raylib-GameEngine`
+- `mkdir build && cd build`
+- `cmake ..`
+- `make`
 
 ### GOAL: 
 -   [ ] stable 3D environment
 -   [ ] good UI
--   [ ] optional modules [video, ...] 
+-   [ ] optional modules [libvideo, lib2d, ...] 
