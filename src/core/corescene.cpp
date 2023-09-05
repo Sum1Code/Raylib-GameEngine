@@ -1,5 +1,5 @@
 #include "corescene.h"
-#include "core.h"
+#include "coreobjects.h"
 #include <memory>
 #include <raylib.h>
 using namespace libengine::core::scene;
@@ -22,7 +22,7 @@ void Scene::render() {
   BeginDrawing();
   ClearBackground(RAYWHITE);
   BeginMode3D(cam.cam);
-  DrawGrid(100, 1.0f);
+  DrawGrid(200, 1.0f);
   for (const auto &object : objects) {
     object->draw(cam);
   }
@@ -34,15 +34,18 @@ void Scene::render() {
 void Scene::add_object(ObjectType objtype, const ObjectParams params) {
   switch (objtype) {
   case (ObjectType::CUBE):
-    objects.push_back(std::make_unique<CubeObject>(params));
+    auto yes = std::make_unique<CubeObject>(
+        CubeObject(params)); // new CubeObject(params);
+    objects.push_back(std::move(yes));
     break;
   }
 }
 void Scene::add_object(ObjectType objtype) {
   switch (objtype) {
   case (ObjectType::CUBE):
-    objects.push_back(std::make_unique<CubeObject>(
-        (ObjectParams){{0, 0, 0}, {2, 2, 2}, BLUE, GREEN}));
+    auto yes = std::make_unique<CubeObject>(
+        CubeObject({{0, 0, 0}, {2, 2, 2}, BLUE, GREEN}));
+    objects.push_back(std::move(yes));
     break;
   }
 }

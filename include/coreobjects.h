@@ -24,10 +24,10 @@ struct Object {
   bool IsHitByRay;
 
   Object(ObjectParams params)
-      : pos(params.position), size(params.position), color(params.color),
+      : pos(params.position), size(params.size), color(params.color),
         outline(params.outline), IsHitByRay(false) {}
   virtual ~Object(){};
-  virtual void draw(scene::SceneCam &cam) const {};
+  virtual void draw(scene::SceneCam &cam) const = 0;
 };
 
 struct CubeObject : public Object {

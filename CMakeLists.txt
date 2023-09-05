@@ -2,6 +2,7 @@ cmake_minimum_required( VERSION 3.20 )
 project(rayengine)
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 set(CMAKE_CXX_STANDARD 20)
+add_definitions(-ggdb -Wall -Wextra -Wno-missing-field-initializers)
 # include(FetchContent)
 # set(FETCHCONTENT_QUIET FALSE)
 # set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) # don't build the supplied examples
@@ -18,7 +19,7 @@ set(CMAKE_CXX_STANDARD 20)
 # FetchContent_MakeAvailable(raylib)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
-file(GLOB SRCS "src/**/*.cpp")
+file(GLOB SRCS  ./src/core/*.cpp ./src/user/*.cpp)
 
 add_executable(${PROJECT_NAME} ${SRCS})
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
