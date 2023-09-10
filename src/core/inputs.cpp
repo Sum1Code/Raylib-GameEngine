@@ -1,7 +1,7 @@
-
-#include "functions.h"
 #include "core.h"
-void handle_inputs(int &fps, libengine::core::scene::Scene &currscene) {
+using namespace libengine::core::scene;
+
+void Scene::handle_inputs() {
 
   const float minFOV = 1.0f;
   const float maxFOV = 45.0f;
@@ -22,13 +22,11 @@ void handle_inputs(int &fps, libengine::core::scene::Scene &currscene) {
 
   float wheel = GetMouseWheelMove();
   if (wheel != 0) {
-    currscene.cam.cam.fovy += (wheel * fovIncrement);
+    cam.cam.fovy += (wheel * fovIncrement);
     // Constrain FOV within limits
-    if (currscene.cam.cam.fovy < minFOV)
-      currscene.cam.cam.fovy = minFOV;
-    else if (currscene.cam.cam.fovy > maxFOV)
-      currscene.cam.cam.fovy = maxFOV;
+    if (cam.cam.fovy < minFOV)
+      cam.cam.fovy = minFOV;
+    else if (cam.cam.fovy > maxFOV)
+      cam.cam.fovy = maxFOV;
   }
-
-  // Calculate camera movement direction based on user input
 }
