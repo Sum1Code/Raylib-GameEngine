@@ -1,8 +1,9 @@
-# Rayengine << DISCONTINUED >>
+# Rayengine-C++ << DISCONTINUED >>
 A UI Game engine made with Raylib.. cheating? definitely... 
 
-# NOTICE
-This repository and project has been migrated to the new rayengine repository: https://github.com/Sum1Code/rayengine.git
+# IMPORTANT NOTICE
+This repository has been discontinued and the project has been moved to the new rayengine repository: https://github.com/Sum1Code/rayengine.git 
+The new project uses rust-lang instead
 
 ## DEPENDENCIES
 - raylib 4.5.0
